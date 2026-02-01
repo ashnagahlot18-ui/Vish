@@ -104,36 +104,33 @@
     Will you be my Valentine?
   </p>
 
-  <!-- Your image -->
-  <img src="https://raw.githubusercontent.com/ashnagahlot18-ui/Vish/main/IMG_3028.jpeg" alt="Ashna & Vishal ❤️">
+  <!-- Your photo -->
+  <img src="https://raw.githubusercontent.com/ashnagahlot18-ui/Vish/main/IMG_3028.jpeg" alt="Me & Vishal ❤️">
 
   <div class="buttons">
     <button id="yes">YES 💖</button>
     <button id="no">NO 🙄</button>
   </div>
 
-  <!-- Background music: replace with your own ad-free MP3 URL -->
+  <!-- Background music -->
   <audio autoplay loop>
     <source src="https://raw.githubusercontent.com/ashnagahlot18-ui/Vish/main/thousandyears.mp3" type="audio/mpeg">
   </audio>
 
   <script>
-   const noBtn = document.getElementById("no");
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
 
-// NO button: runs away randomly when hovered or clicked
-function moveNo() {
-  // Random position: can go slightly off-screen
-  const x = Math.random() * (window.innerWidth + 200) - 100; 
-  const y = Math.random() * (window.innerHeight + 200) - 100;
-
-  noBtn.style.position = "absolute";
-  noBtn.style.left = `${x}px`;
-  noBtn.style.top = `${y}px`;
-}
-
-// Trigger on hover and click
-noBtn.addEventListener("mouseenter", moveNo);
-noBtn.addEventListener("click", moveNo);
+    // NO button: runs away randomly when hovered or clicked
+    function moveNo() {
+      const x = Math.random() * (window.innerWidth + 200) - 100; 
+      const y = Math.random() * (window.innerHeight + 200) - 100;
+      noBtn.style.position = "absolute";
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    }
+    noBtn.addEventListener("mouseenter", moveNo);
+    noBtn.addEventListener("click", moveNo);
 
     // YES button click
     yesBtn.addEventListener("click", () => {
