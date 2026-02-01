@@ -104,15 +104,15 @@
     Will you be my Valentine?
   </p>
 
-  <!-- Add your photo by replacing YOUR_IMAGE_URL -->
-  <img src="YOUR_IMAGE_URL" alt="Me & Vishal ❤️">
+  <!-- Your image -->
+  <img src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/IMG_3028.jpeg" alt="Me & Vishal ❤️">
 
   <div class="buttons">
     <button id="yes">YES 💖</button>
     <button id="no">NO 🙄</button>
   </div>
 
-  <!-- Background music: replace YOUR_MP3_URL with your ad-free MP3 -->
+  <!-- Background music: replace with your own ad-free MP3 URL -->
   <audio autoplay loop>
     <source src="YOUR_MP3_URL.mp3" type="audio/mpeg">
   </audio>
@@ -121,23 +121,16 @@
     const noBtn = document.getElementById("no");
     const yesBtn = document.getElementById("yes");
 
-    // NO button moves randomly for 3 seconds on hover, then disappears
+    // NO button: jumps every time the mouse hovers or clicks
     function moveNo() {
-      let count = 0;
-      const interval = setInterval(() => {
-        const x = Math.random() * (window.innerWidth - 120);
-        const y = Math.random() * (window.innerHeight - 60);
-        noBtn.style.position = "absolute";
-        noBtn.style.left = x + "px";
-        noBtn.style.top = y + "px";
-        count += 1;
-        if(count > 15){ // 15 intervals x 200ms = 3 seconds
-          clearInterval(interval);
-          noBtn.style.display = "none"; // disappears
-        }
-      }, 200);
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
     }
     noBtn.addEventListener("mouseenter", moveNo);
+    noBtn.addEventListener("click", moveNo);
 
     // YES button click
     yesBtn.addEventListener("click", () => {
@@ -180,7 +173,7 @@
     }
     setInterval(createHeart, 300);
 
-    // Automatic "I Will Always Love You" popup after 3 seconds
+    // Automatic "I Will Always Love You" popup
     setTimeout(() => alert("I Will Always Love You ❤️"), 3000);
   </script>
 
