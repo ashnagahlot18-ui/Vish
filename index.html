@@ -1,181 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Valentine 💘</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #ffe6f0, #ffd1dc);
-      position: relative;
-    }
-
-    h1 {
-      color: #c9184a;
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #6a040f;
-      font-size: 1.1rem;
-      text-align: center;
-      max-width: 300px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      position: relative;
-    }
-
-    button {
-      padding: 12px 28px;
-      font-size: 18px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      margin: 10px;
-      transition: transform 0.2s;
-      position: relative;
-    }
-
-    #yes {
-      background-color: #ff4d6d;
-      color: white;
-      box-shadow: 0 4px 15px rgba(255, 77, 109, 0.5);
-    }
-
-    #yes:hover {
-      transform: scale(1.05);
-    }
-
-    #no {
-      background-color: #dee2e6;
-    }
-
-    .heart {
-      position: absolute;
-      color: #ff4d6d;
-      font-size: 20px;
-      animation: float 6s linear infinite;
-      opacity: 0.7;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-      50% { opacity: 0.8; }
-      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
-    }
-
-    .love-heart {
-      position: absolute;
-      font-size: 20px;
-      animation: explode 1s ease-out forwards;
-      pointer-events: none;
-    }
-
-    @keyframes explode {
-      0% { transform: scale(1) translate(0,0); opacity: 1; }
-      100% { transform: scale(2) translate(var(--x), var(--y)); opacity: 0; }
-    }
-
-    img {
-      width: 300px;
-      border-radius: 15px;
-      margin: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Valentine 💘</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #ffd1dc);
+  position: relative;
+}
+h1 {
+  color: #c9184a;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+p {
+  color: #6a040f;
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+.buttons {
+  position: relative;
+}
+button {
+  padding: 12px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s;
+  position: relative;
+}
+#yes {
+  background-color: #ff4d6d;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.5);
+}
+#yes:hover { transform: scale(1.05); }
+#no { background-color: #dee2e6; }
+.heart {
+  position: absolute;
+  color: #ff4d6d;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+}
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+.love-heart {
+  position: absolute;
+  font-size: 20px;
+  animation: explode 1s ease-out forwards;
+  pointer-events: none;
+}
+@keyframes explode {
+  0% { transform: scale(1) translate(0,0); opacity: 1; }
+  100% { transform: scale(2) translate(var(--x), var(--y)); opacity: 0; }
+}
+img {
+  width: 300px;
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+</style>
 </head>
 <body>
 
-  <h1>Hey Vishal ❤️</h1>
-  <p>
-    Even with all these miles between us,  
-    my heart chooses you every single day 💕<br><br>
-    Will you be my Valentine?
-  </p>
+<h1>Hey Vishal ❤️</h1>
+<p>
+Even with all these miles between us,<br>
+my heart chooses you every single day 💕<br><br>
+Will you be my Valentine?
+</p>
 
-  <!-- Your photo -->
-  <img src="https://raw.githubusercontent.com/ashnagahlot18-ui/Vish/main/IMG_3028.jpeg" alt="Me & Vishal ❤️">
+<!-- Your photo -->
+<img src="https://raw.githubusercontent.com/ashnagahlot18-ui/Vish/main/IMG_3028.jpeg" alt="Me & Vishal ❤️">
 
-  <div class="buttons">
-    <button id="yes">YES 💖</button>
-    <button id="no">NO 🙄</button>
-  </div>
+<div class="buttons">
+  <button id="yes">YES 💖</button>
+  <button id="no">NO 🙄</button>
+</div>
 
-  <!-- Background music -->
-  <audio autoplay loop>
-    <source src="https://raw.githubusercontent.com/ashnagahlot18-ui/Vish/main/thousand-years.mp3" type="audio/mpeg">
-  </audio>
+<!-- Background music -->
+<audio autoplay loop>
+  <source src="https://raw.githubusercontent.com/ashnagahlot18-ui/Vish/main/thousand-years.mp3" type="audio/mpeg">
+</audio>
 
-  <script>
-    const noBtn = document.getElementById("no");
-    const yesBtn = document.getElementById("yes");
+<script>
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
 
-    // NO button: runs away randomly when hovered or clicked
-    function moveNo() {
-      const x = Math.random() * (window.innerWidth + 200) - 100;
-      const y = Math.random() * (window.innerHeight + 200) - 100;
-      noBtn.style.position = "absolute";
-      noBtn.style.left = `${x}px`;
-      noBtn.style.top = `${y}px`;
+// NO button: dynamically moves away from cursor, stays inside screen
+document.addEventListener("mousemove", (e) => {
+    const btnRect = noBtn.getBoundingClientRect();
+    const offset = 50; // distance to trigger move
+    const dx = e.clientX - (btnRect.left + btnRect.width / 2);
+    const dy = e.clientY - (btnRect.top + btnRect.height / 2);
+
+    if (Math.abs(dx) < 80 && Math.abs(dy) < 80) {
+        let newX = btnRect.left - dx;
+        let newY = btnRect.top - dy;
+
+        // keep inside screen
+        newX = Math.max(0, Math.min(window.innerWidth - btnRect.width, newX));
+        newY = Math.max(0, Math.min(window.innerHeight - btnRect.height, newY));
+
+        noBtn.style.position = "absolute";
+        noBtn.style.left = newX + "px";
+        noBtn.style.top = newY + "px";
     }
-    noBtn.addEventListener("mouseenter", moveNo);
-    noBtn.addEventListener("click", moveNo);
+});
 
-    // YES button click
-    yesBtn.addEventListener("click", () => {
-      document.body.innerHTML = `
-        <h1>YAYYY 🥹💘</h1>
-        <p>
-          I knew you’d say yes 💕<br><br>
-          Thank you for being my safe place,  
-          my biggest support,  
-          and my forever Valentine ❤️<br><br>
-          No matter the distance, it’s always you.
-        </p>
-      `;
-      setTimeout(() => alert("I love you, Vishal 💌"), 500);
+// YES button click
+yesBtn.addEventListener("click", () => {
+  document.body.innerHTML = `
+    <h1>YAYYY 🥹💘</h1>
+    <p>
+      I knew you’d say yes 💕<br><br>
+      Thank you for being my safe place,<br>
+      my biggest support,<br>
+      and my forever Valentine ❤️<br><br>
+      No matter the distance, it’s always you.
+    </p>
+  `;
 
-      // Heart explosion
-      for(let i=0;i<50;i++){
-        const heart = document.createElement("div");
-        heart.classList.add("love-heart");
-        heart.style.left = (window.innerWidth/2) + "px";
-        heart.style.top = (window.innerHeight/2) + "px";
-        heart.style.setProperty('--x', (Math.random()*400-200)+'px');
-        heart.style.setProperty('--y', (Math.random()*400-200)+'px');
-        heart.innerText = "💖";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 1000);
-      }
-    });
+  // Heart explosion
+  for(let i=0;i<50;i++){
+    const heart = document.createElement("div");
+    heart.classList.add("love-heart");
+    heart.style.left = (window.innerWidth/2) + "px";
+    heart.style.top = (window.innerHeight/2) + "px";
+    heart.style.setProperty('--x', (Math.random()*400-200)+'px');
+    heart.style.setProperty('--y', (Math.random()*400-200)+'px');
+    heart.innerText = "💖";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1000);
+  }
 
-    // Floating hearts in background
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.innerHTML = "💗";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = Math.random() * 20 + 15 + "px";
-      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 7000);
-    }
-    setInterval(createHeart, 300);
+  // Show "I Will Always Love You" popup after YES
+  setTimeout(() => alert("I Will Always Love You ❤️"), 1000);
+});
 
-    // Automatic "I Will Always Love You" popup
-    setTimeout(() => alert("I Will Always Love You ❤️"), 3000);
-  </script>
+// Floating hearts in background
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💗";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 7000);
+}
+setInterval(createHeart, 300);
+</script>
 
 </body>
 </html>
